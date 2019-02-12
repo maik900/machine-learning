@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
+Maik Schulte
+Feburary 11st, 2019
 
 ## Proposal
 _(approx. 2-3 pages)_
@@ -9,37 +9,62 @@ _(approx. 2-3 pages)_
 ### Domain Background
 _(approx. 1-2 paragraphs)_
 
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+Currently I am working as a consultant for SAP software. In the SAP System we do have lots of data and a lot of clerks are working on it. As clerks are very expansive, companies are searching for possibilities to reduce this cost. Automation of manual tasks could be one way to archive this goal.
+
+SAP itself is able to automate a lot of tasks by its own. However, it uses only very little machine learning possibilities. But let me describe the problem in more detail:
 
 ### Problem Statement
 _(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+The SAP module CRM is used for every interaction between customer and company. These interactions need to be performed by employees. Nevertheless, in large companies there are employees specialised for different topics. This means:
+department 1: billing
+department 2: endurance of products
+
+If a customer request with topic billing is routed to department 2, an employee will read through the customer request. Because he is not able to answer the request he is assigning the ticket to the billing department. This is consuming a lot of time and it could be automated using machine learning.
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+As a dataset I would like to use the popular 20 Newsgroups data set. It is available on http://qwone.com/~jason/20Newsgroups/. It includes around 18.828 news documents. All of these belong to 1 of 20 categories.
+
+Of course, this dataset does not include real customer requests. I want to use this dataset, because it includes a lot of categorized text. And this data should be really similar to categorized customer request.
 
 ### Solution Statement
 _(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+The machine learning model could provide a first guess for the category of the customer request. And save money and time for a company this way.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
 
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
+As a benchmark model, I would like to use Naive Bayes classifier for multinomial models provided in sk learn documentation:
+https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html
 
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
 
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+As a benchmark a performance scoring can be used. For example:
+proportion of correct classifications,
+f1 score,
+etc.
 
 ### Project Design
 _(approx. 1 page)_
+I would like proceed as follows:
+Please Note: a) b) c) ... show options I would like to use and eventually compare.
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+1. read & analyse the data
+2. create vector from text
+  a) using sk learn count vectorizer
+  b) using word embeddings
+  
+3. create a model to predict text category
+  a) using sk learn
+  b) using deep neural network (is applicable: use cnn or rnn)
+  
+4. test and visualise the performance
+  a) show examples
+  b) show the overall performance
 
 -----------
 
