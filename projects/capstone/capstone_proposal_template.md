@@ -64,20 +64,20 @@ Please Note: * ... show options I would like to use and eventually compare.
   * talking about language and similarity of the classes
   
 2. create vector from text
-  a) using sk learn count vectorizer (BOW)
-  b) using word embeddings (word2vec) maybe the pre trained model: https://nlp.stanford.edu/projects/glove/
+  * using sk learn count vectorizer (BOW)
+  * using word embeddings (word2vec) maybe the pre trained model: https://nlp.stanford.edu/projects/glove/
   
 3. create a model to predict text category
-  a) using sk learn (multinomial Naive Bayes classifier, fine tuning maybe using grid search)
-  b) using deep neural network (use cnn if possible)
+  * using sk learn (multinomial Naive Bayes classifier, fine tuning maybe using grid search)
+  * using deep neural network (use cnn if possible)
   
   Rough estimation of CNN design:
   https://richliao.github.io/supervised/classification/2016/11/26/textclassifier-convolutional/
   For fine tuning I will 
   
 4. test and visualise the performance
-  a) show examples
-  b) show the overall performance
+  * show examples
+  * show the overall performance
 
 -----------
 
