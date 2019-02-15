@@ -55,13 +55,13 @@ etc.
 ### Project Design
 _(approx. 1 page)_
 I would like proceed as follows:
-Please Note: *) ... show options I would like to use and eventually compare.
+Please Note: * ... show options I would like to use and eventually compare.
 
 1. read & analyse the data
-  a) become familiar with the data (taking a closer look at specific data sets)
-  b) are the classes imbalanced?
-  c) What length does the text usually have?
-  d) talking about language and similarity of the classes
+  * become familiar with the data (taking a closer look at specific data sets)
+  * are the classes imbalanced?
+  * What length does the text usually have?
+  * talking about language and similarity of the classes
   
 2. create vector from text
   a) using sk learn count vectorizer (BOW)
