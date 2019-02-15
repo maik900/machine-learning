@@ -13,6 +13,8 @@ Currently I am working as a consultant for SAP software. In the SAP System we do
 
 SAP itself is able to automate a lot of tasks by its own. However, it uses only very little machine learning possibilities. But let me describe the problem in more detail:
 
+Text classification is an essential component in many applications, such as web searching, information filtering, and sentiment analysis (Aggarwal and Zhai 2012). Therefore, it has attracted considerable attention from many researchers (Lai, Siwei, et al. "Recurrent Convolutional Neural Networks for Text Classification." AAAI. Vol. 333. 2015). Today very different approaches can be used and I would like to introduce the most suitable for the problem statement:
+
 ### Problem Statement
 _(approx. 1 paragraph)_
 
