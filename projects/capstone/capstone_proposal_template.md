@@ -24,17 +24,19 @@ department 2: endurance of products
 
 If a customer request with topic billing is routed to department 2, an employee will read through the customer request. Because he is not able to answer the request he is assigning the ticket to the billing department. This is consuming a lot of time and it could be automated using machine learning.
 
+In terms of machine learning we have lots of emails that need to be correctly categorized regarding their responsible department to solve the problem.
+
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
 
-As a dataset I would like to use the popular 20 Newsgroups data set. It is available on http://qwone.com/~jason/20Newsgroups/. It includes around 18.828 news documents. All of these belong to 1 of 20 categories.
+As a dataset I would like to use the popular 20 Newsgroups data set. It is available on http://qwone.com/~jason/20Newsgroups/. It includes around 18.828 news documents. All of these belong to 1 of 20 categories. I will use these categories as labels of the data. The data is slightly imbalanced. If needed, it is possible to balance the classes correctly as shown here: https://imbalanced-learn.readthedocs.io/en/stable/auto_examples/applications/plot_topic_classication.html
 
 Of course, this dataset does not include real customer requests. I want to use this dataset, because it includes a lot of categorized text. And this data should be really similar to categorized customer request.
 
 ### Solution Statement
 _(approx. 1 paragraph)_
 
-The machine learning model could provide a first guess for the category of the customer request. And save money and time for a company this way.
+I will pre-process the labelled data to make it useful for machine learning techniques. The next step will be to create vectors from the texts. These vectors can now be processed by machine learning algorithms.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
@@ -56,13 +58,22 @@ I would like proceed as follows:
 Please Note: a) b) c) ... show options I would like to use and eventually compare.
 
 1. read & analyse the data
+  a) become familiar with the data (taking a closer look at specific data sets)
+  b) are the classes imbalanced?
+  c) What length does the text usually have?
+  d) talking about language and similarity of the classes
+  
 2. create vector from text
-  a) using sk learn count vectorizer
-  b) using word embeddings
+  a) using sk learn count vectorizer (BOW)
+  b) using word embeddings (word2vec) maybe the pre trained model: https://nlp.stanford.edu/projects/glove/
   
 3. create a model to predict text category
-  a) using sk learn
-  b) using deep neural network (is applicable: use cnn or rnn)
+  a) using sk learn (multinomial Naive Bayes classifier, fine tuning maybe using grid search)
+  b) using deep neural network (use cnn if possible)
+  
+  Rough estimation of CNN design:
+  https://richliao.github.io/supervised/classification/2016/11/26/textclassifier-convolutional/
+  For fine tuning I will 
   
 4. test and visualise the performance
   a) show examples
