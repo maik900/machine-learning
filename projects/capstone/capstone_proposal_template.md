@@ -55,7 +55,7 @@ etc.
 ### Project Design
 _(approx. 1 page)_
 I would like proceed as follows:
-Please Note: a) b) c) ... show options I would like to use and eventually compare.
+Please Note: *) ... show options I would like to use and eventually compare.
 
 1. read & analyse the data
   a) become familiar with the data (taking a closer look at specific data sets)
